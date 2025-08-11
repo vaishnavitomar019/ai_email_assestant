@@ -1,0 +1,100 @@
+.app-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+ 
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* deeper shadow for 3D effect */
+}
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #c1c1c1;
+  cursor: not-allowed;
+ 
+}
+
+button:hover:not(:disabled) {
+  background-color: #004ccc;
+}
+
+.send-btn {
+  background-color: #28a745;
+}
+
+.send-btn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.loader {
+  margin: 1rem auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #3b833d;
+ 
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -1,0 +1,43 @@
+<div class="app-container">
+  <h2>AI Email Generator</h2>
+
+  <!-- Recipient Email -->
+  <label for="email">Recipient Email</label>
+  <input type="email" id="email" [(ngModel)]="toEmail" name="email" placeholder="example@gmail.com" required
+    (blur)="emailTouched = true" />
+  <div *ngIf="emailTouched && !validateEmail(toEmail)" style="color: red; font-size: 0.9rem;">
+    Enter a valid email.
+  </div>
+
+  <!-- Prompt -->
+  <label for="prompt">Prompt</label>
+  <textarea id="prompt" [(ngModel)]="promptText" name="prompt" placeholder="Enter your prompt here..." rows="4" required
+    (blur)="promptTouched = true"></textarea>
+  <div *ngIf="promptTouched && !promptText?.trim()" style="color: red; font-size: 0.9rem;">
+    Prompt is required.
+  </div>
+
+  <!-- Generate Email Button -->
+  <button (click)="generateEmail()" [disabled]="loading || !validateEmail(toEmail) || !promptText?.trim()">
+    {{ loading ? 'Generating...' : 'Generate Email' }}
+  </button>
+
+  <!-- Loader -->
+  <div *ngIf="loading" class="loader"></div>
+
+  <!-- Generated Email -->
+  <div *ngIf="generatedEmail">
+    <label for="generated">Generated Email</label>
+    <textarea id="generated" [(ngModel)]="generatedEmail" rows="10"></textarea>
+  </div>
+
+  <!-- Send Email -->
+  <button class="send-btn" (click)="sendEmail()" [disabled]="!generatedEmail || !toEmail || sending">
+    {{ sending ? 'Sending...' : 'Send Email' }}
+  </button>
+
+  <!-- Popup Message -->
+  <div class="popup" *ngIf="popupMessage">
+    {{ popupMessage }}
+  </div>
+</div>
