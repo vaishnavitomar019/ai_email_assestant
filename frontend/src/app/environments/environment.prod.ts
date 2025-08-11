@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://your-production-url.com/api'
+  apiBaseUrl: 'https://ai-email-assestant.onrender.com/'
 };
