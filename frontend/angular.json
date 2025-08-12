@@ -4,6 +4,13 @@
   "newProjectRoot": "projects",
   "projects": {
     "frontend": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "hi": "src/locale/messages.hi.xlf",
+          "fr": "src/locale/messages.fr.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -26,10 +33,11 @@
             ],
             "styles": [
               "src/styles.css",
-                "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -47,6 +55,14 @@
               ],
               "outputHashing": "all"
             },
+            "hi": {
+              "localize": ["hi"],
+              "outputPath": "dist/frontend-hi"
+            },
+            "fr": {
+              "localize": ["fr"],
+              "outputPath": "dist/frontend-fr"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -60,6 +76,12 @@
           "configurations": {
             "production": {
               "buildTarget": "frontend:build:production"
+            },
+              "hi": {
+              "buildTarget": "frontend:build:hi"
+            },
+            "fr": {
+              "buildTarget": "frontend:build:fr"
             },
             "development": {
               "buildTarget": "frontend:build:development"
