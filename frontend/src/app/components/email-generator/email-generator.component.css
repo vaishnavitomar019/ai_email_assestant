@@ -4,11 +4,11 @@
   padding: 2rem;
   border: 1px solid #ddd;
   border-radius: 15px;
- 
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* deeper shadow for 3D effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
 }
+
 h2 {
   text-align: center;
   margin-bottom: 1.5rem;
