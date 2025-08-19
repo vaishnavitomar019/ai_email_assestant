@@ -10,7 +10,7 @@ A full-stack application built with **Angular** (frontend) and **Node.js** (back
 
 ---
 
-## 🚀 Features
+##  Features
 
 1. **AI-Powered Email Generation**  
    Uses Groq API to generate email content from a user-provided prompt.
@@ -18,18 +18,15 @@ A full-stack application built with **Angular** (frontend) and **Node.js** (back
 2. **Editable Email Draft**  
    Generated emails can be edited before sending.
 
-3. **Multiple Recipients Support**  
-   Send to one or multiple email addresses at once.
-
-4. **Nodemailer Integration**  
+3. **Nodemailer Integration**  
    Securely sends emails from your configured SMTP server.
 
-5. **Responsive UI**  
+4. **Responsive UI**  
    Built with Angular for a clean, user-friendly interface.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend:** Angular, HTML, SCSS, TypeScript  
 **Backend:** Node.js, Express.js  
@@ -39,7 +36,7 @@ A full-stack application built with **Angular** (frontend) and **Node.js** (back
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```
 AI_Email_Assestant/
 ├── backend/
@@ -74,7 +71,7 @@ AI_Email_Assestant/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### 1️⃣ Clone the repository
 ```bash
